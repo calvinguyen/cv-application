@@ -2,13 +2,17 @@
   border: 1px solid black;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 #cv-form {
   background-color: white;
   padding: 15px;
   height: 1124px;
   width: 816px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 5fr 2fr;
   grid-template-rows: 1fr 4fr;
   gap: 15px;
 }
