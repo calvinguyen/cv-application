@@ -19,6 +19,5 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     'no-console': 'off',
     'no-unused-vars': 'warn',
-    'prettier/prettier': 'error',
   },
 };
