@@ -1,6 +1,8 @@
 function Header() {
   return (
-    <header>CV CREATOR</header>
+    <header>
+      <h1 className="header-text">CV CREATOR</h1>
+    </header>
   )
 }
 

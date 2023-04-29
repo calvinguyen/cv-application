@@ -16,8 +16,10 @@ module.exports = {
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 0,
     'react-hooks/exhaustive-deps': 0,
+    'react/function-component-definition': 0,
     'react-refresh/only-export-components': 'warn',
     'no-console': 'off',
     'no-unused-vars': 'warn',
+    'arrow-body-style': 0,
   },
 };

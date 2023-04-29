@@ -1,7 +1,11 @@
+import CVForm from './CVForm/CVForm';
+
 function Main() {
   return (
-    <main>Main</main>
-  )
+    <main>
+      <CVForm />
+    </main>
+  );
 }
 
-export default Main
+export default Main;
