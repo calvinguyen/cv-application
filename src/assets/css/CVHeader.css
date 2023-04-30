@@ -1,0 +1,15 @@
+#cv-header {
+  padding: 0 20px 15px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+#cv-header h1 {
+  font-size: 30px;
+  
+}
+
+#cv-header p {
+  font-size: 18px;
+  margin-top: 10px;
+}

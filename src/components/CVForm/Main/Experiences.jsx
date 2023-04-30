@@ -5,7 +5,7 @@ const Experiences = () => {
 
       {/* Experience Card goes here */}
       <div className="card">
-        <p className="card-title company">Senior Software Engineer, Google</p>
+        <p className="card-title">Senior Software Engineer, Google</p>
         <p className="card-subtitle">Boston, MA &#8226; January 2016 - Present</p>
         <ul className="card-description">
           <li>
@@ -24,7 +24,7 @@ const Experiences = () => {
       </div>
 
       <div className="card">
-        <p className="card-title company">Software Engineer, Stack Overflow</p>
+        <p className="card-title">Software Engineer, Stack Overflow</p>
         <p className="card-subtitle">Boston, MA &#8226; September 2014 — December 2015</p>
         <ul className="card-description">
           <li>

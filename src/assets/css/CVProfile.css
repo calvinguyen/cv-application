@@ -1,0 +1,10 @@
+/* General Info */
+.general-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+}

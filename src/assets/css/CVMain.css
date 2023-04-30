@@ -1,0 +1,16 @@
+.projects .section-title, .organizations .section-title {
+  margin-top: 23px;
+}
+
+.card-subtitle, .card-description {
+  font-size: 14px;
+}
+
+.card-subtitle {
+  margin-top: 5px;
+}
+
+.card-description {
+  margin-top: 5px;
+  padding-left: 15px;
+}
