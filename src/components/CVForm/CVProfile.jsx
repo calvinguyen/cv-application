@@ -1,11 +1,16 @@
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import '../../assets/css/CVProfile.css';
+import noAvatar from '../../assets/images/noAvatar.jpg';
+
 
 const CVProfile = () => {
   return (
     <section id="cv-profile">
 
       <section className="general-info">
-        <img src="" alt="profile" className="profile-pic" />
+        <img src={noAvatar} alt="profile" className="profile-pic" />
         <p className="current-location">San Fancisco</p>
         <div className="general-links">
           <a href="cnguyenr42@gmail.com">cnguyenr42@gmail.com</a>
@@ -14,52 +19,60 @@ const CVProfile = () => {
       </section>
 
       <section className="social-links">
-        <div className="social-link-item">
-          <span className="social-icon">icon</span>
-          <a href="#cv-profile">linkedin.com/in/calvintnguyen</a>
-        </div>
-        <div className="social-link-item">
-          <span className="social-icon">icon</span>
-          <a href="#cv-profile">github.com/calvinguyen</a>
-        </div>
-        <div className="social-link-item">
-          <span className="social-icon">icon</span>
-          <a href="#cv-profile">twitter.com/calvinguyen</a>
-        </div>
+        <ul className="social-links-list">
+          <li className="social-link-item">
+            <a href="#cv-profile">
+              <LinkedInIcon />
+              <span className="social-text">linkedin.com/in/calvintnguyen</span>
+            </a>
+          </li>
+          <li className="social-link-item">
+            <a href="#cv-profile">
+              <GitHubIcon />
+              <span className="social-text">github.com/calvinguyen</span>
+            </a>
+          </li>
+          <li className="social-link-item">
+            <a href="#cv-profile">
+              <TwitterIcon />
+              <span className="social-text">twitter.com/calvinguyen</span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section className="skills">
-        <h1 className="section-title">TECHNOLOGIES</h1>
+        <h1 className="section-title section-title-profile">TECHNOLOGIES</h1>
         <ul className="skills-list">
           <li className="skill-item">
             <p>ReactJS</p>
-            <span>bar</span>
+            <progress value="100" max="100" />
           </li>
           <li className="skill-item">
             <p>Jest</p>
-            <span>bar</span>
+            <progress value="100" max="100" />
           </li>
           <li className="skill-item">
             <p>ExpressJS</p>
-            <span>bar</span>
+            <progress value="100" max="100" />
           </li>
           <li className="skill-item">
             <p>Jupyter Notebook</p>
-            <span>bar</span>
+            <progress value="100" max="100" />
           </li>
           <li className="skill-item">
             <p>Django</p>
-            <span>bar</span>
+            <progress value="100" max="100" />
           </li>
         </ul>
       </section>
       
       <section className="hobbies">
-        <h1 className="section-title">TECHNICAL SKILLS</h1>
+        <h1 className="section-title section-title-profile">TECHNICAL SKILLS</h1>
       </section>
       
       <section className="education">
-        <h1 className="section-title">EDUCATION</h1>
+        <h1 className="section-title section-title-profile">EDUCATION</h1>
 
         <div className="card">
           <p className="card-title">The University of Texas at Austin</p>
@@ -69,11 +82,11 @@ const CVProfile = () => {
       </section>
       
       <section className="certifications">
-        <h1 className="section-title">CERTIFICATIONS</h1>
+        <h1 className="section-title section-title-profile">CERTIFICATIONS</h1>
 
-        <div className="card">
-          <p className="card-title-cert">Developing Applications with Google Cloud Platform</p>
-          <p className="card-subtitle-cert">Offered by Google Cloud, 2014</p>
+        <div className="card card-certification">
+          <p className="title-cert">Developing Applications with Google Cloud Platform</p>
+          <p className="subtitle-cert">Offered by Google Cloud, 2014</p>
         </div>
       </section>
 

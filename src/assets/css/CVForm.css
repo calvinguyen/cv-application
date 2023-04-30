@@ -1,7 +1,3 @@
-#cv-form #cv-profile {
-  border: 1px solid black;
-}
-
 #cv-form {
   background-color: white;
   padding: 20px;
@@ -17,10 +13,6 @@
 
 #cv-header {
   grid-column: 1 / 3;
-}
-
-#cv-main, #cv-profile {
-  padding: 8px;
 }
 
 .section-title {
@@ -43,4 +35,13 @@
 
 li {
   margin: 4px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
