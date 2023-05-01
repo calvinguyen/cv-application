@@ -14,7 +14,6 @@ npm start
 ## Built with
 
 - [React](https://reactjs.org/)
-- [react-icons](https://www.npmjs.com/package/react-icons)
-- [styled-components](https://styled-components.com/)
+- [Material-icons](https://mui.com/material-ui/icons/)
 - [react-to-print](https://www.npmjs.com/package/react-to-print)
 - [uuid](https://www.npmjs.com/package/uuid)
