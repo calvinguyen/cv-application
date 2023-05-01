@@ -1,5 +1,6 @@
 import CVForm from './CVForm/CVForm';
-import CVEditForm from './CVEditForm/CVEditForm';
+import CVEditBar from './CVEditBar/CVEditBar';
+import SideBar from './SideBar';
 
 /* 
   TODO: Hold Form State in Main
@@ -9,7 +10,8 @@ import CVEditForm from './CVEditForm/CVEditForm';
 function Main() {
   return (
     <main>
-      <CVEditForm />
+      <SideBar />
+      <CVEditBar />
       <CVForm />
     </main>
   );
