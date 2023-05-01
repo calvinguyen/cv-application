@@ -1,23 +1,25 @@
-const ExperienceCard = () => {
+import { v4 as uuidv4 } from 'uuid';
+
+const ExperienceCard = ({ cardInfo }) => {
+  const {
+    company,
+    jobTitle,
+    location,
+    startDate,
+    endDate,
+    description
+  } = cardInfo;
+  
+  const bulletPoints = description.map(item => {
+    return <li key={uuidv4()}>{ item }</li>;
+  })
+
   return (
     <div className="card">
-      <p className="card-title">Senior Software Engineer, Google</p>
-      <p className="card-subtitle">Boston, MA &#8226; January 2016 - Present</p>
+      <p className="card-title">{jobTitle}, {company}</p>
+      <p className="card-subtitle">{location} &#8226; {startDate} - {endDate}</p>
       <ul className="card-description">
-        <li>
-          Wrote modular, secure, and well-tested code in Python, React, and Go
-          that is currently being used by millions of daily users.
-        </li>
-        <li>
-          Partnered with product managers, designers, and analysts to deeply
-          understand the needs of users and build a file sharing product that
-          serves those needs.
-        </li>
-        <li>
-          Led a team of engineers to build infrastructure to handle metadata for
-          hundreds of billions of files, hundreds of petabytes of user data, and
-          millions of concurrent connections.
-        </li>
+        {bulletPoints}
       </ul>
     </div>
   );
