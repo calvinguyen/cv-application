@@ -58,7 +58,20 @@ progress {
 }
 
 /* Hobbies */
+.hobbies-item-container {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
+.hobbies-item {
+  font-size: 13px;
+  color: #737373;
+  border: 1px solid #737373;
+  border-radius: 20px;
+  padding: 3px 8px;
+}
 
 /* Education */
 .education-location-date {
