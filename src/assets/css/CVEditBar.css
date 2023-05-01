@@ -1,3 +1,35 @@
 #cv-edit-bar {
   background-color: white;
+  padding: 15px;
+}
+
+.edit-bar-title {
+  color: #525252;
+  font-size: 30px;
+}
+
+.edit-section {
+  margin-top: 30px;
+}
+
+form {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input-container.span-col {
+  grid-column: 1 / -1;
 }
