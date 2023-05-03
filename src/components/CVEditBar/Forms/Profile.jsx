@@ -1,6 +1,6 @@
 const Profile = () => {
   return (
-    <section className="edit-section">
+    <section id="profile-form" className="edit-section">
       <h1 className='edit-section-title'>Your Profile</h1>
 
       <form className=''>

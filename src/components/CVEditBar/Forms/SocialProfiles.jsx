@@ -6,7 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const SocialProfiles = () => {
   return (
-    <section className="edit-section">
+    <section id='social-form' className="edit-section">
       <h1 className='edit-section-title'>Your Social Profiles</h1>
 
       <form className=''>

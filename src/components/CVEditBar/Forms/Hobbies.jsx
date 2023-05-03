@@ -1,6 +1,6 @@
 const Hobbies = () => {
   return (
-    <section className="edit-section">
+    <section id="hobbies-form" className="edit-section">
       <h1 className='edit-section-title'>Your Hobbies</h1>
 
       <form className=''>

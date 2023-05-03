@@ -1,6 +1,6 @@
 const Organizations = () => {
   return (
-    <section className="edit-section">
+    <section id="orgs-form" className="edit-section">
       <h1 className='edit-section-title'>Your Organizations</h1>
 
       <form className=''>

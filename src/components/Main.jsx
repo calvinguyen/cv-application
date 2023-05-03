@@ -12,7 +12,9 @@ function Main() {
     <main>
       <SideBar />
       <CVEditBar />
-      <CVForm />
+      <div id="cv-form-container">
+        <CVForm />
+      </div>
     </main>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Certifications = () => {
   return (
-    <section className="edit-section">
+    <section id='certs-form' className="edit-section">
       <h1 className='edit-section-title'>Your Certifications</h1>
 
       <form className=''>
