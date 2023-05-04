@@ -17,9 +17,11 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react-hooks/exhaustive-deps': 0,
     'react/function-component-definition': 0,
+    'react/jsx-no-bind': 0,
     'react-refresh/only-export-components': 'warn',
     'no-console': 'off',
     'no-unused-vars': 'warn',
     'arrow-body-style': 0,
+    'no-param-reassign': 0,
   },
 };

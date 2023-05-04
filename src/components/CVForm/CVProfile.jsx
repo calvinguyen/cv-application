@@ -6,17 +6,11 @@ import Hobbies from './Profile/Hobbies';
 import Education from './Profile/Education';
 import Certifications from './Profile/Certifications';
 
-const CVProfile = () => {
+const CVProfile = ({cv}) => {
   return (
     <section id="cv-profile">
 
-      {/* Props {
-        profilePic,
-        currentLocation,
-        email,
-        personalWebsite
-      } */}
-      <GeneralInfo />
+      <GeneralInfo generalInfo={cv.generalInfo} />
 
       {/* Props {
         linkedin,

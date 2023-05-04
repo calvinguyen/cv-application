@@ -1,13 +1,11 @@
 import '../../assets/css/CVHeader.css';
 
-const CVHeader = () => {
+const CVHeader = ({ generalInfo }) => {
   return (
     <section id="cv-header">
-      <h1>Calvin Nguyen</h1>
+      <h1>{`${generalInfo.firstName} ${generalInfo.lastName}`}</h1>
       <p>
-        Experienced lead full-stack software engineer seeking a position at a
-        mid-sized web product startup where I can apply my skills in developing,
-        scaling, and maintaining web services in Google Cloud.
+        {generalInfo.cvSummary}
       </p>
     </section>
   );

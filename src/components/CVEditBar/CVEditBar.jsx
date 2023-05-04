@@ -9,22 +9,15 @@ import Projects from './Forms/Projects';
 import Organizations from './Forms/Organizations';
 import Certifications from './Forms/Certifications';
 
-const CVEditBar = () => {
+const CVEditBar = ({ cv, onGeneralInfoChange }) => {
   return (
     <section id='cv-edit-bar'>
       <h1 className="edit-bar-title">Editing CV</h1>
       
-      {/* Props {
-        profilePic,
-        firstName,
-        lastName,
-        phone,
-        email,
-        location,
-        personalWebsite,
-        cvSummary,
-      } */}
-      <Profile />
+      <Profile 
+        generalInfo={cv.generalInfo} 
+        onGeneralInfoChange={onGeneralInfoChange}
+      />
 
       {/* Props {
         linkedIn,

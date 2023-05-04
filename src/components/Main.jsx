@@ -1,6 +1,9 @@
+// import { useState } from 'react';
+import { useImmer } from 'use-immer';
 import CVForm from './CVForm/CVForm';
 import CVEditBar from './CVEditBar/CVEditBar';
 import SideBar from './SideBar';
+import emptyCV from '../data/emptyCV';
 
 /* 
   TODO: Hold Form State in Main
@@ -8,12 +11,30 @@ import SideBar from './SideBar';
 */
 
 function Main() {
+  const [cv, setCv] = useImmer(emptyCV);
+
+  function handleGeneralInfoChange(e) {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      draft.generalInfo[name] = value;
+    })
+  }
+
+
   return (
     <main>
       <SideBar />
-      <CVEditBar />
+
+      <CVEditBar 
+        cv={cv}
+        onGeneralInfoChange={handleGeneralInfoChange}
+      />
+
       <div id="cv-form-container">
-        <CVForm />
+        <CVForm 
+          cv={cv}
+        />
       </div>
     </main>
   );

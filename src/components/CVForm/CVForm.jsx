@@ -3,13 +3,22 @@ import CVHeader from './CVHeader';
 import CVMain from './CVMain';
 import CVProfile from './CVProfile';
 
-const CVForm = () => {
+const CVForm = ({ cv }) => {
 
   return (
     <section id="cv-form">
-      <CVHeader />
+      <CVHeader 
+        generalInfo={cv.generalInfo}
+      />
+
+      {/* Props {
+        firstName,
+        lastName,
+        cvSummary
+      } */}
       <CVMain />
-      <CVProfile />
+
+      <CVProfile cv={cv} />
     </section>
   );
 };

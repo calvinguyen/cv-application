@@ -1,13 +1,12 @@
-import noAvatar from '../../../assets/images/noAvatar.jpg';
-
-const GeneralInfo = () => {
+const GeneralInfo = ({ generalInfo }) => {
   return (
     <section className="general-info">
-      <img src={noAvatar} alt="profile" className="profile-pic" />
-      <p className="current-location">San Fancisco</p>
+      <img src={generalInfo.profilePic} alt="profile" className="profile-pic" />
+      <p className="current-location">{generalInfo.location}</p>
       <div className="general-links">
-        <a href="cnguyenr42@gmail.com">cnguyenr42@gmail.com</a>
-        <a href="http://calvinguyen.com">http://calvinguyen.com</a>
+        <p className="phone">{generalInfo.phone}</p>
+        <a href="cnguyenr42@gmail.com">{generalInfo.email}</a>
+        <a href="http://calvinguyen.com">{generalInfo.personalWebsite}</a>
       </div>
     </section>
   );
