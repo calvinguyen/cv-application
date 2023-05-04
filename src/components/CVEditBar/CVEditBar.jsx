@@ -9,7 +9,11 @@ import Projects from './Forms/Projects';
 import Organizations from './Forms/Organizations';
 import Certifications from './Forms/Certifications';
 
-const CVEditBar = ({ cv, onGeneralInfoChange }) => {
+const CVEditBar = ({ 
+  cv, 
+  onGeneralInfoChange,
+  onSocialProfileChange 
+}) => {
   return (
     <section id='cv-edit-bar'>
       <h1 className="edit-bar-title">Editing CV</h1>
@@ -26,7 +30,10 @@ const CVEditBar = ({ cv, onGeneralInfoChange }) => {
         instagram,
         github,
       } */}
-      <SocialProfiles />
+      <SocialProfiles 
+        socialProfiles={cv.socialProfiles}
+        onSocialProfileChange={onSocialProfileChange}
+      />
       
       {/* Props {
         skillSectionTitle,

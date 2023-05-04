@@ -11,12 +11,7 @@ const CVForm = ({ cv }) => {
         generalInfo={cv.generalInfo}
       />
 
-      {/* Props {
-        firstName,
-        lastName,
-        cvSummary
-      } */}
-      <CVMain />
+      <CVMain cv={cv} />
 
       <CVProfile cv={cv} />
     </section>

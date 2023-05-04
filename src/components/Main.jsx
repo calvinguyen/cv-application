@@ -4,6 +4,7 @@ import CVForm from './CVForm/CVForm';
 import CVEditBar from './CVEditBar/CVEditBar';
 import SideBar from './SideBar';
 import emptyCV from '../data/emptyCV';
+import exampleCV from '../data/exampleCV';
 
 /* 
   TODO: Hold Form State in Main
@@ -20,6 +21,14 @@ function Main() {
       draft.generalInfo[name] = value;
     })
   }
+  
+  function handleSocialProfileChange(e) {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      draft.socialProfiles[name] = value;
+    })
+  }
 
 
   return (
@@ -29,6 +38,7 @@ function Main() {
       <CVEditBar 
         cv={cv}
         onGeneralInfoChange={handleGeneralInfoChange}
+        onSocialProfileChange={handleSocialProfileChange}
       />
 
       <div id="cv-form-container">

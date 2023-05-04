@@ -12,14 +12,7 @@ const CVProfile = ({cv}) => {
 
       <GeneralInfo generalInfo={cv.generalInfo} />
 
-      {/* Props {
-        linkedin,
-        github,
-        twitter,
-        facebook,
-        instagram
-      } */}
-      <SocialLinks />
+      <SocialLinks socialProfiles={cv.socialProfiles} />
 
       {/* Props {
         skillsSectionTitle,

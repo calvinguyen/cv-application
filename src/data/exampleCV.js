@@ -6,29 +6,49 @@ const emptyCV = {
     profilePic: noAvatar,
     firstName: 'John',
     lastName: 'Smith',
-    phone: '',
-    email: '',
-    location: '',
-    personalWebsite: '',
+    phone: '281-965-9232',
+    email: 'cnguyenr42@gmail.com',
+    location: 'Houston, TX',
+    personalWebsite: 'http://calvinguyen.com',
     cvSummary: `Experienced lead full-stack software engineer seeking a position at a
     mid-sized web product startup where I can apply my skills in developing,
     scaling, and maintaining web services in Google Cloud.`,
   },
 
   socialProfiles: {
-    linkedIn: '',
-    twitter: '',
-    facebook: '',
-    instagram: '',
-    github: '',
+    linkedIn: 'linkedin.com/in/calvintnguyen',
+    twitter: 'twitter.com/calvinguyen',
+    facebook: 'facebook.com/user',
+    instagram: 'instagram.com/user',
+    github: 'github.com/calvinguyen',
   },
 
   skillSectionTitle: 'Technologies',
   skills: [
     {
       id: uuidv4(),
-      skill: '',
-      level: '',
+      skill: 'ReactJS',
+      level: 80,
+    },
+    {
+      id: uuidv4(),
+      skill: 'Jest',
+      level: 100,
+    },
+    {
+      id: uuidv4(),
+      skill: 'ExpressJS',
+      level: 100,
+    },
+    {
+      id: uuidv4(),
+      skill: 'Jupyter Notebook',
+      level: 100,
+    },
+    {
+      id: uuidv4(),
+      skill: 'Django',
+      level: 100,
     },
   ],
 
@@ -36,7 +56,35 @@ const emptyCV = {
   hobbies: [
     {
       id: uuidv4(),
-      name: '',
+      name: 'JavaScript',
+    },
+    {
+      id: uuidv4(),
+      name: 'Python',
+    },
+    {
+      id: uuidv4(),
+      name: 'Ruby',
+    },
+    {
+      id: uuidv4(),
+      name: 'Scala',
+    },
+    {
+      id: uuidv4(),
+      name: 'Go',
+    },
+    {
+      id: uuidv4(),
+      name: 'HTML',
+    },
+    {
+      id: uuidv4(),
+      name: 'CSS',
+    },
+    {
+      id: uuidv4(),
+      name: 'Ansible',
     },
   ],
 
@@ -44,12 +92,12 @@ const emptyCV = {
   education: [
     {
       id: uuidv4(),
-      schoolName: '',
-      location: '',
-      startDate: '',
-      endDate: '',
-      gpa: '',
-      degree: '',
+      schoolName: 'The University of Texas at Austin',
+      location: 'Austin, TX',
+      startDate: '2010',
+      endDate: '2014',
+      gpa: '4.0',
+      degree: 'B.S. Computer Science',
     },
   ],
 
@@ -57,43 +105,82 @@ const emptyCV = {
   certifications: [
     {
       id: uuidv4(),
-      name: '',
-      date: '',
+      name: 'Developing Applications with Google Cloud Platform',
+      date: 'Offered by Google Cloud, 2014',
     },
   ],
 
   experienceSectionTitle: 'Work Experience',
   experiences: [
     {
-      company: '',
-      jobTitle: '',
-      location: '',
-      startDate: '',
-      endDate: '',
-      description: [],
+      company: 'Google',
+      jobTitle: 'Senior Software Engineer',
+      location: 'Boston, MA',
+      startDate: 'January 2016',
+      endDate: 'Present',
+      description: [
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+      ],
     },
   ],
 
   projectSectionTitle: 'Projects',
   projects: [
     {
-      title: '',
-      techStack: '',
-      projectUrl: '',
-      startDate: '',
-      endDate: '',
-      description: [],
+      title: 'The Social Network',
+      techStack: 'MERN Stack',
+      projectUrl: 'github.com',
+      startDate: 'March 2014',
+      endDate: 'June 2015',
+      description: [
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+      ],
     },
   ],
 
   organizationSectionTitle: 'Organizations',
   organizations: [
     {
-      title: '',
-      location: '',
-      startDate: '',
-      endDate: '',
-      description: [],
+      title: 'Honor Society',
+      location: 'Boston, MA',
+      startDate: 'March 2014',
+      endDate: 'June 2015',
+      description: [
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+        {
+          id: uuidv4(),
+          text: ``
+        },
+      ],
     },
   ],
 };
