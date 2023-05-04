@@ -12,7 +12,8 @@ import Certifications from './Forms/Certifications';
 const CVEditBar = ({ 
   cv, 
   onGeneralInfoChange,
-  onSocialProfileChange 
+  onSocialProfileChange,
+  onSectionTitleChange
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -23,34 +24,24 @@ const CVEditBar = ({
         onGeneralInfoChange={onGeneralInfoChange}
       />
 
-      {/* Props {
-        linkedIn,
-        twitter,
-        facebook,
-        instagram,
-        github,
-      } */}
       <SocialProfiles 
         socialProfiles={cv.socialProfiles}
         onSocialProfileChange={onSocialProfileChange}
       />
       
-      {/* Props {
-        skillSectionTitle,
-        skills: [
-          {
-            skillName,
-            progressBarVal
-          }
-        ],
-      } */}
-      <Skills />
+      <Skills 
+        skills={cv.skills}
+        sectionTitle={cv.skillSectionTitle}
+        onSectionTitleChange={onSectionTitleChange}
+      />
 
       {/* Props {
         hobbiesSectionTitle,
         hobbies: [],
       } */}
-      <Hobbies />
+      <Hobbies 
+        onSectionTitleChange={onSectionTitleChange}
+      />
 
       {/* Props {
         educationSectionTitle,
@@ -65,7 +56,9 @@ const CVEditBar = ({
           },
         ]
       } */}
-      <Education />
+      <Education 
+        onSectionTitleChange={onSectionTitleChange}
+      />
 
       {/* Props {
         experienceSectionTitle,
@@ -80,7 +73,9 @@ const CVEditBar = ({
           },
         ]
       } */}
-      <Experiences />
+      <Experiences 
+        onSectionTitleChange={onSectionTitleChange}
+      />
 
       {/* Props {
         projectSectionTitle,
@@ -95,7 +90,9 @@ const CVEditBar = ({
           },
         ]
       } */}
-      <Projects />
+      <Projects 
+        onSectionTitleChange={onSectionTitleChange}
+      />
       
       {/* Props {
         organizationSectionTitle,
@@ -109,7 +106,9 @@ const CVEditBar = ({
           },
         ]
       } */}
-      <Organizations />
+      <Organizations 
+        onSectionTitleChange={onSectionTitleChange}
+      />
 
       {/* Props {
         certificationSectionTitle,
@@ -120,7 +119,9 @@ const CVEditBar = ({
           },
         ]
       } */}
-      <Certifications />
+      <Certifications 
+        onSectionTitleChange={onSectionTitleChange}
+      />
       
     </section>
   )

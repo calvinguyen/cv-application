@@ -18,7 +18,10 @@ const CVProfile = ({cv}) => {
         skillsSectionTitle,
         skillsList []
       } */}
-      <Skills />
+      <Skills 
+        skills={cv.skills}
+        sectionTitle={cv.skillSectionTitle}
+      />
       
       {/* Props {
         hobbiesSectionTitle,

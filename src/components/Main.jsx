@@ -4,7 +4,7 @@ import CVForm from './CVForm/CVForm';
 import CVEditBar from './CVEditBar/CVEditBar';
 import SideBar from './SideBar';
 import emptyCV from '../data/emptyCV';
-import exampleCV from '../data/exampleCV';
+// import exampleCV from '../data/exampleCV';
 
 /* 
   TODO: Hold Form State in Main
@@ -30,6 +30,14 @@ function Main() {
     })
   }
 
+  function handleSectionTitleChange(e) {
+    const {name, value} = e.target;
+    
+    setCv(draft => {
+      draft[name] = value;
+    })
+  }
+
 
   return (
     <main>
@@ -39,6 +47,7 @@ function Main() {
         cv={cv}
         onGeneralInfoChange={handleGeneralInfoChange}
         onSocialProfileChange={handleSocialProfileChange}
+        onSectionTitleChange={handleSectionTitleChange}
       />
 
       <div id="cv-form-container">

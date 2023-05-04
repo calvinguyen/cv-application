@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Skills = () => {
+const Skills = ({skills, sectionTitle}) => {
   return (
     <section className="skills">
-      <h1 className="section-title section-title-profile">TECHNOLOGIES</h1>
+      <h1 className="section-title section-title-profile">{sectionTitle}</h1>
       <ul className="skills-list">
         <li className="skill-item">
           <p>ReactJS</p>

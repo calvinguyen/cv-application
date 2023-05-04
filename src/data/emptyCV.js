@@ -21,12 +21,17 @@ const emptyCV = {
     github: '',
   },
 
-  skillSectionTitle: 'Technologies',
+  skillSectionTitle: 'TECHNOLOGIES',
   skills: [
     {
       id: uuidv4(),
-      skill: '',
-      level: '',
+      name: '',
+      level: 50,
+    },
+    {
+      id: uuidv4(),
+      name: '',
+      level: 50,
     },
   ],
 
