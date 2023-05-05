@@ -13,7 +13,10 @@ const CVEditBar = ({
   cv, 
   onGeneralInfoChange,
   onSocialProfileChange,
-  onSectionTitleChange
+  onSectionTitleChange,
+  onAddSkill,
+  onSkillChange,
+  onDeleteSkill,
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -33,6 +36,9 @@ const CVEditBar = ({
         skills={cv.skills}
         sectionTitle={cv.skillSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onAddSkill={onAddSkill}
+        onSkillChange={onSkillChange}
+        onDeleteSkill={onDeleteSkill}
       />
 
       {/* Props {

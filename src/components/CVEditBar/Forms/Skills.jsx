@@ -1,8 +1,20 @@
 import SkillItem from './SkillItem';
 
-const Skills = ({ skills, sectionTitle, onSectionTitleChange }) => {
+const Skills = ({ 
+  skills, 
+  sectionTitle, 
+  onSectionTitleChange,
+  onAddSkill,
+  onSkillChange,
+  onDeleteSkill,
+}) => {
   const renderSkills = skills.map((skill) => (
-    <SkillItem key={skill.id} skill={skill} />
+    <SkillItem 
+      key={skill.id} 
+      skill={skill} 
+      onSkillChange={onSkillChange} 
+      onDeleteSkill={onDeleteSkill}
+    />
   ));
 
   return (
@@ -23,7 +35,11 @@ const Skills = ({ skills, sectionTitle, onSectionTitleChange }) => {
         <p className="label section-label">Skills</p>
         {renderSkills}
 
-        <button className="add-entry-btn" type="button">
+        <button 
+          className="add-entry-btn" 
+          type="button"
+          onClick={() => onAddSkill()}
+        >
           Add Skill
         </button>
       </form>

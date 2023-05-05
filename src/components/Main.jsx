@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import { useImmer } from 'use-immer';
+import { v4 as uuidv4 } from 'uuid';
 import CVForm from './CVForm/CVForm';
 import CVEditBar from './CVEditBar/CVEditBar';
 import SideBar from './SideBar';
@@ -11,7 +12,7 @@ import emptyCV from '../data/emptyCV';
   TODO: Pass State props to Form and Edit Form
 */
 
-function Main() {
+const Main = () => {
   const [cv, setCv] = useImmer(emptyCV);
 
   function handleGeneralInfoChange(e) {
@@ -38,6 +39,34 @@ function Main() {
     })
   }
 
+  /* SKILL CRUD FUNCTIONS */
+  // Todo: test update skill level
+  const handleSkillChange = (e, skillId) => {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      const index = draft.skills.findIndex(skill => skill.id === skillId);
+      if (index !== -1) draft.skills[index][name] = value;
+    })
+  }
+
+  const handleAddSKill = () => {
+    setCv(draft => {
+      draft.skills.push({
+        id: uuidv4(),
+        name: '',
+        level: 0,
+      })
+    })
+  }
+
+  const handleDeleteSkill = (skillId) => {
+    setCv(draft => {
+      const index = draft.skills.findIndex(skill => skill.id === skillId);
+      if (index !== -1) draft.skills.splice(index, 1);
+    })
+  }
+
 
   return (
     <main>
@@ -48,6 +77,9 @@ function Main() {
         onGeneralInfoChange={handleGeneralInfoChange}
         onSocialProfileChange={handleSocialProfileChange}
         onSectionTitleChange={handleSectionTitleChange}
+        onAddSkill={handleAddSKill}
+        onSkillChange={handleSkillChange}
+        onDeleteSkill={handleDeleteSkill}
       />
 
       <div id="cv-form-container">
