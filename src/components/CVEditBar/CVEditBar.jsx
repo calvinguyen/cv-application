@@ -17,6 +17,9 @@ const CVEditBar = ({
   onAddSkill,
   onSkillChange,
   onDeleteSkill,
+  onHobbyChange,
+  onAddHobby,
+  onDeleteHobby,
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -41,12 +44,13 @@ const CVEditBar = ({
         onDeleteSkill={onDeleteSkill}
       />
 
-      {/* Props {
-        hobbiesSectionTitle,
-        hobbies: [],
-      } */}
-      <Hobbies 
+      <Hobbies
+        hobbies={cv.hobbies}
+        sectionTitle={cv.hobbySectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onHobbyChange={onHobbyChange}
+        onAddHobby={onAddHobby}
+        onDeleteHobby={onDeleteHobby}
       />
 
       {/* Props {

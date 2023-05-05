@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { useImmer } from 'use-immer';
 import { v4 as uuidv4 } from 'uuid';
 import CVForm from './CVForm/CVForm';
@@ -66,6 +65,31 @@ const Main = () => {
     })
   }
 
+  /* HOBBIES CRUD FUNCTIONS */
+  const handleHobbyChange = (e, hobbyId) => {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      const index = draft.hobbies.findIndex(hobby => hobby.id === hobbyId);
+      if (index !== -1) draft.hobbies[index][name] = value;
+    })
+  }
+
+  const handleAddHobby = () => {
+    setCv(draft => {
+      draft.hobbies.push({
+        id: uuidv4(),
+        name: '',
+      })
+    })
+  }
+
+  const handleDeleteHobby = (hobbyId) => {
+    setCv(draft => {
+      const index = draft.hobbies.findIndex(hobby => hobby.id === hobbyId);
+      if (index !== -1) draft.hobbies.splice(index, 1);
+    })
+  }
 
   return (
     <main>
@@ -79,6 +103,9 @@ const Main = () => {
         onAddSkill={handleAddSKill}
         onSkillChange={handleSkillChange}
         onDeleteSkill={handleDeleteSkill}
+        onHobbyChange={handleHobbyChange}
+        onAddHobby={handleAddHobby}
+        onDeleteHobby={handleDeleteHobby}
       />
 
       <div id="cv-form-container">
