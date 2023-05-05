@@ -1,17 +1,26 @@
-import React from 'react';
+const EducationCard = ({ school }) => {
+  return (
+    <div className="card">
+      <p className="card-title">{school.schoolName}</p>
+      <p className="education-location-date">
+        {school.location} &#8226; {`${school.startDate} - ${school.endDate}`}
+      </p>
+      <p className="education-location-date"> {`GPA: ${school.gpa}`} </p>
+      <p className="card-subtitle-education">{school.degree}</p>
+    </div>
+  );
+};
 
-const Education = () => {
+const Education = ({ education, sectionTitle }) => {
+  const renderEducationCards = education.map((school) => (
+    <EducationCard key={school.id} school={school} />
+  ));
+
   return (
     <section className="education">
-      <h1 className="section-title section-title-profile">EDUCATION</h1>
+      <h1 className="section-title section-title-profile">{sectionTitle}</h1>
 
-      <div className="card">
-        <p className="card-title">The University of Texas at Austin</p>
-        <p className="education-location-date">
-          Austin, TX &#8226; 2010 — 2014
-        </p>
-        <p className="card-subtitle-education">B.S. Computer Science</p>
-      </div>
+      {renderEducationCards}
     </section>
   );
 };
