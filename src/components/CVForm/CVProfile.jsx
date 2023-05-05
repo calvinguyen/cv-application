@@ -14,10 +14,6 @@ const CVProfile = ({cv}) => {
 
       <SocialLinks socialProfiles={cv.socialProfiles} />
 
-      {/* Props {
-        skillsSectionTitle,
-        skillsList []
-      } */}
       <Skills 
         skills={cv.skills}
         sectionTitle={cv.skillSectionTitle}

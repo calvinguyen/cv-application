@@ -28,11 +28,6 @@ const emptyCV = {
       name: '',
       level: 50,
     },
-    {
-      id: uuidv4(),
-      name: '',
-      level: 50,
-    },
   ],
 
   hobbySectionTitle: 'Technical Skills',
