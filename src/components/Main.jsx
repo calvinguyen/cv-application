@@ -15,7 +15,7 @@ import emptyCV from '../data/emptyCV';
 const Main = () => {
   const [cv, setCv] = useImmer(emptyCV);
 
-  function handleGeneralInfoChange(e) {
+  const handleGeneralInfoChange = (e) => {
     const {name, value} = e.target;
 
     setCv(draft => {
@@ -23,7 +23,7 @@ const Main = () => {
     })
   }
   
-  function handleSocialProfileChange(e) {
+  const handleSocialProfileChange = (e) => {
     const {name, value} = e.target;
 
     setCv(draft => {
@@ -31,7 +31,7 @@ const Main = () => {
     })
   }
 
-  function handleSectionTitleChange(e) {
+  const handleSectionTitleChange = (e) => {
     const {name, value} = e.target;
     
     setCv(draft => {
