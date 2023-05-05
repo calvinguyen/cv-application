@@ -1,16 +1,21 @@
-import React from 'react';
+const CertCard = ({ cert }) => {
+  return (
+    <div className="card card-certification">
+      <p className="title-cert">{cert.name}</p>
+      <p className="subtitle-cert">{cert.date}</p>
+    </div>
+  );
+};
 
-const Certifications = () => {
+const Certifications = ({ certifications, sectionTitle }) => {
+  const renderCerts = certifications.map((cert) => (
+    <CertCard key={cert.id} cert={cert} />
+  ));
+
   return (
     <section className="certifications">
-      <h1 className="section-title section-title-profile">CERTIFICATIONS</h1>
-
-      <div className="card card-certification">
-        <p className="title-cert">
-          Developing Applications with Google Cloud Platform
-        </p>
-        <p className="subtitle-cert">Offered by Google Cloud, 2014</p>
-      </div>
+      <h1 className="section-title section-title-profile">{sectionTitle}</h1>
+      {renderCerts}
     </section>
   );
 };
