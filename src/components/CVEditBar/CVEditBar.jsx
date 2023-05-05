@@ -23,6 +23,9 @@ const CVEditBar = ({
   onEducationChange,
   onAddEducation,
   onDeleteEducation,
+  onCertificationChange,
+  onAddCertification,
+  onDeleteCertification
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -115,17 +118,13 @@ const CVEditBar = ({
         onSectionTitleChange={onSectionTitleChange}
       />
 
-      {/* Props {
-        certificationSectionTitle,
-        certifications: [
-          {
-            name,
-            date,
-          },
-        ]
-      } */}
       <Certifications 
+        certifications={cv.certifications}
+        sectionTitle={cv.certificationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onCertificationChange={onCertificationChange}
+        onAddCertification={onAddCertification}
+        onDeleteCertification={onDeleteCertification}
       />
       
     </section>

@@ -122,6 +122,33 @@ const Main = () => {
     })
   }
 
+  /* CERTIFICATIONS CRUD FUNCTIONS */
+  const handleCertificationChange = (e, id) => {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      const index = draft.certifications.findIndex(certification => certification.id === id);
+      if (index !== -1) draft.certifications[index][name] = value;
+    })
+  }
+
+  const handleAddCertification = () => {
+    setCv(draft => {
+      draft.certifications.push({
+        id: uuidv4(),
+        name: '',
+        date: '',
+      })
+    })
+  }
+
+  const handleDeleteCertification = (id) => {
+    setCv(draft => {
+      const index = draft.certifications.findIndex(certification => certification.id === id);
+      if (index !== -1) draft.certifications.splice(index, 1);
+    })
+  }
+
   return (
     <main>
       <SideBar />
@@ -140,6 +167,9 @@ const Main = () => {
         onEducationChange={handleEducationChange}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onCertificationChange={handleCertificationChange}
+        onAddCertification={handleAddCertification}
+        onDeleteCertification={handleDeleteCertification}
       />
 
       <div id="cv-form-container">
