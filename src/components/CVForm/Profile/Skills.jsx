@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Skills = ({skills, sectionTitle}) => {
   return (
     <section className="skills">
@@ -7,7 +5,7 @@ const Skills = ({skills, sectionTitle}) => {
       <ul className="skills-list">
         <li className="skill-item">
           <p>ReactJS</p>
-          <progress value="70" max="100" />
+          <progress value="100" max="100" />
         </li>
         <li className="skill-item">
           <p>Jest</p>

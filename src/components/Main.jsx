@@ -40,7 +40,6 @@ const Main = () => {
   }
 
   /* SKILL CRUD FUNCTIONS */
-  // Todo: test update skill level
   const handleSkillChange = (e, skillId) => {
     const {name, value} = e.target;
 

@@ -14,7 +14,14 @@ const SkillItem = ({ skill, onSkillChange, onDeleteSkill }) => {
       >
         X
       </button>
-      <progress name="level" value={skill.level} max="100" />
+      <input 
+        type="range"
+        name="level"
+        min="0" 
+        max="100" 
+        value={skill.level}
+        onChange={(e) => onSkillChange(e, skill.id)}
+      />
     </div>
   );
 };
