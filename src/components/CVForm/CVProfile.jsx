@@ -18,12 +18,11 @@ const CVProfile = ({cv}) => {
         skills={cv.skills}
         sectionTitle={cv.skillSectionTitle}
       />
-      
-      {/* Props {
-        hobbiesSectionTitle,
-        hobbiesList []
-      } */}
-      <Hobbies />
+
+      <Hobbies 
+        hobbies={cv.hobbies}
+        sectionTitle={cv.hobbySectionTitle}
+      />
       
       {/* Props {
         educationSectionTitle,
