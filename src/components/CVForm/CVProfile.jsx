@@ -6,48 +6,26 @@ import Hobbies from './Profile/Hobbies';
 import Education from './Profile/Education';
 import Certifications from './Profile/Certifications';
 
-const CVProfile = ({cv}) => {
+const CVProfile = ({ cv }) => {
   return (
     <section id="cv-profile">
-
       <GeneralInfo generalInfo={cv.generalInfo} />
 
       <SocialLinks socialProfiles={cv.socialProfiles} />
 
-      <Skills 
-        skills={cv.skills}
-        sectionTitle={cv.skillSectionTitle}
+      <Skills skills={cv.skills} sectionTitle={cv.skillSectionTitle} />
+
+      <Hobbies hobbies={cv.hobbies} sectionTitle={cv.hobbySectionTitle} />
+
+      <Education
+        education={cv.education}
+        sectionTitle={cv.educationSectionTitle}
       />
 
-      <Hobbies 
-        hobbies={cv.hobbies}
-        sectionTitle={cv.hobbySectionTitle}
+      <Certifications
+        certifications={cv.certifications}
+        sectionTitle={cv.certificationSectionTitle}
       />
-      
-      {/* Props {
-        educationSectionTitle,
-        educationCard = [
-          {
-            schoolName,
-            schoolLocation,
-            startEndDate,
-            degree
-          },
-        ]
-      } */}
-      <Education />
-      
-      {/* Props {
-        certSectionTitle,
-        certCard = [
-          {
-            certName,
-            certDate
-          },
-        ]
-      } */}
-      <Certifications />
-
     </section>
   );
 };

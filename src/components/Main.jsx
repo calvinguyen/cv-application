@@ -91,6 +91,37 @@ const Main = () => {
     })
   }
 
+  /* EDUCATION CRUD FUNCTIONS */
+  const handleEducationChange = (e, id) => {
+    const {name, value} = e.target;
+
+    setCv(draft => {
+      const index = draft.education.findIndex(education => education.id === id);
+      if (index !== -1) draft.education[index][name] = value;
+    })
+  }
+
+  const handleAddEducation = () => {
+    setCv(draft => {
+      draft.education.push({
+        id: uuidv4(),
+        schoolName: '',
+        location: '',
+        startDate: '',
+        endDate: '',
+        gpa: '',
+        degree: '',
+      })
+    })
+  }
+
+  const handleDeleteEducation = (id) => {
+    setCv(draft => {
+      const index = draft.education.findIndex(education => education.id === id);
+      if (index !== -1) draft.education.splice(index, 1);
+    })
+  }
+
   return (
     <main>
       <SideBar />
@@ -106,6 +137,9 @@ const Main = () => {
         onHobbyChange={handleHobbyChange}
         onAddHobby={handleAddHobby}
         onDeleteHobby={handleDeleteHobby}
+        onEducationChange={handleEducationChange}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
 
       <div id="cv-form-container">

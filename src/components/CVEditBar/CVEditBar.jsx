@@ -20,6 +20,9 @@ const CVEditBar = ({
   onHobbyChange,
   onAddHobby,
   onDeleteHobby,
+  onEducationChange,
+  onAddEducation,
+  onDeleteEducation,
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -53,21 +56,13 @@ const CVEditBar = ({
         onDeleteHobby={onDeleteHobby}
       />
 
-      {/* Props {
-        educationSectionTitle,
-        schools: [
-          {
-            schoolName,
-            location,
-            startDate,
-            endDate,
-            gpa,
-            degree
-          },
-        ]
-      } */}
       <Education 
+        education={cv.education}
+        sectionTitle={cv.educationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onEducationChange={onEducationChange}
+        onAddEducation={onAddEducation}
+        onDeleteEducation={onDeleteEducation}
       />
 
       {/* Props {
