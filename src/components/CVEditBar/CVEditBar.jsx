@@ -25,7 +25,13 @@ const CVEditBar = ({
   onDeleteEducation,
   onCertificationChange,
   onAddCertification,
-  onDeleteCertification
+  onDeleteCertification,
+  onExperienceChange,
+  onAddExperience,
+  onDeleteExperience,
+  onDescriptionChange,
+  onAddDescription,
+  onDeleteDescription,
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -68,21 +74,16 @@ const CVEditBar = ({
         onDeleteEducation={onDeleteEducation}
       />
 
-      {/* Props {
-        experienceSectionTitle,
-        experiences: [
-          {
-            company,
-            jobTitle,
-            location,
-            startDate,
-            endDate,
-            description: [bulletPoint, ...]
-          },
-        ]
-      } */}
-      <Experiences 
+      <Experiences
+        experiences={cv.experiences}
+        sectionTitle={cv.experienceSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onExperienceChange={onExperienceChange}
+        onAddExperience={onAddExperience}
+        onDeleteExperience={onDeleteExperience}
+        onDescriptionChange={onDescriptionChange}
+        onAddDescription={onAddDescription}
+        onDeleteDescription={onDeleteDescription}
       />
 
       {/* Props {

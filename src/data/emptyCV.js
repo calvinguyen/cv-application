@@ -63,14 +63,33 @@ const emptyCV = {
   experienceSectionTitle: 'WORK EXPERIENCE',
   experiences: [
     {
+      id: uuidv4(),
       company: '',
       jobTitle: '',
       location: '',
       startDate: '',
       endDate: '',
-      description: [],
+      description: [
+        {
+          id: uuidv4(),
+          desc: '',
+        }
+      ],
     },
   ],
+  /* experiences: {
+    sectionTitle: 'WORK EXPERIENCE',
+    experienceList: [
+      {
+        company: '',
+        jobTitle: '',
+        location: '',
+        startDate: '',
+        endDate: '',
+        description: [],
+      },
+    ]
+  }, */
 
   projectSectionTitle: 'PROJECTS',
   projects: [
