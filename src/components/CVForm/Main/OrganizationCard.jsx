@@ -1,24 +1,16 @@
-import React from 'react';
+const OrganizationCard = ({ organization }) => {
+  const bulletPoints = organization.description.map((item) => {
+    return <li key={item.id}>{item.desc}</li>;
+  });
 
-const OrganizationCard = () => {
   return (
     <div className="card">
-      <p className="card-title">Honor Society</p>
-      <p className="card-subtitle">Boston, MA &#8226; March 2014 — June 2015</p>
-      <ul className="card-description">
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-          voluptatum? Quisquam cum ad optio iusto suscipit consequatur velit
-          est, quod deleniti assumenda facere, autem et, eius labore sapiente
-          maiores natus!
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-          voluptatum? Quisquam cum ad optio iusto suscipit consequatur velit
-          est, quod deleniti assumenda facere, autem et, eius labore sapiente
-          maiores natus!
-        </li>
-      </ul>
+      <p className="card-title">{organization.title}</p>
+      <p className="card-subtitle">
+        {organization.location} &#8226; {organization.startDate} —{' '}
+        {organization.endDate}
+      </p>
+      <ul className="card-description">{bulletPoints}</ul>
     </div>
   );
 };

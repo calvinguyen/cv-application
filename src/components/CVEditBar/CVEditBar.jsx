@@ -9,8 +9,8 @@ import Projects from './Forms/Projects';
 import Organizations from './Forms/Organizations';
 import Certifications from './Forms/Certifications';
 
-const CVEditBar = ({ 
-  cv, 
+const CVEditBar = ({
+  cv,
   onGeneralInfoChange,
   onSocialProfileChange,
   onSectionTitleChange,
@@ -38,20 +38,20 @@ const CVEditBar = ({
   onAddOrganization,
 }) => {
   return (
-    <section id='cv-edit-bar'>
+    <section id="cv-edit-bar">
       <h1 className="edit-bar-title">Editing CV</h1>
-      
-      <Profile 
-        generalInfo={cv.generalInfo} 
+
+      <Profile
+        generalInfo={cv.generalInfo}
         onGeneralInfoChange={onGeneralInfoChange}
       />
 
-      <SocialProfiles 
+      <SocialProfiles
         socialProfiles={cv.socialProfiles}
         onSocialProfileChange={onSocialProfileChange}
       />
-      
-      <Skills 
+
+      <Skills
         skills={cv.skills}
         sectionTitle={cv.skillSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
@@ -69,7 +69,7 @@ const CVEditBar = ({
         onDeleteHobby={onDeleteHobby}
       />
 
-      <Education 
+      <Education
         education={cv.education}
         sectionTitle={cv.educationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
@@ -92,7 +92,7 @@ const CVEditBar = ({
 
       <Projects
         projects={cv.projects}
-        sectionTitle={cv.projectSectionTitle} 
+        sectionTitle={cv.projectSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
         onDescriptionChange={onDescriptionChange}
         onAddDescription={onAddDescription}
@@ -102,7 +102,7 @@ const CVEditBar = ({
         onDeleteFormCard={onDeleteFormCard}
       />
 
-      <Organizations 
+      <Organizations
         organizations={cv.organizations}
         sectionTitle={cv.organizationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
@@ -114,7 +114,7 @@ const CVEditBar = ({
         onDeleteFormCard={onDeleteFormCard}
       />
 
-      <Certifications 
+      <Certifications
         certifications={cv.certifications}
         sectionTitle={cv.certificationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
@@ -122,9 +122,8 @@ const CVEditBar = ({
         onAddCertification={onAddCertification}
         onDeleteCertification={onDeleteCertification}
       />
-      
     </section>
-  )
-}
+  );
+};
 
-export default CVEditBar
+export default CVEditBar;
