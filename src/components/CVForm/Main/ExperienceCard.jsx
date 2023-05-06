@@ -1,23 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
-
-const ExperienceCard = ({ cardInfo }) => {
-  const {
-    company,
-    jobTitle,
-    location,
-    startDate,
-    endDate,
-    description
-  } = cardInfo;
+const ExperienceCard = ({ work }) => {
   
-  const bulletPoints = description.map(item => {
-    return <li key={uuidv4()}>{ item }</li>;
+  const bulletPoints = work.description.map(item => {
+    return <li key={item.id}>{ item.desc }</li>;
   })
 
   return (
     <div className="card">
-      <p className="card-title">{jobTitle}, {company}</p>
-      <p className="card-subtitle">{location} &#8226; {startDate} - {endDate}</p>
+      <p className="card-title">{work.jobTitle}, {work.company}</p>
+      <p className="card-subtitle">{work.location} &#8226; {work.startDate} - {work.endDate}</p>
       <ul className="card-description">
         {bulletPoints}
       </ul>

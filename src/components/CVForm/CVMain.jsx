@@ -3,25 +3,14 @@ import Projects from './Main/Projects';
 import Organizations from './Main/Organizations';
 import '../../assets/css/CVMain.css';
 
-const CVMain = () => {
+const CVMain = ({cv}) => {
   return (
     <section id="cv-main">
-      {/* Props {
-        experienceSectionTitle,
-        cardExperience: [
-          {
-            company,
-            jobTitle,
-            location,
-            startDate,
-            endDate,
-            description: [
-              bulletPoint, ...,
-            ]
-          }
-        ]
-      } */}
-      <Experiences />
+      
+      <Experiences 
+        experiences={cv.experiences}
+        sectionTitle={cv.experienceSectionTitle}
+      />
 
       {/* Props {
         projectSectionTitle,
