@@ -12,38 +12,15 @@ const CVMain = ({cv}) => {
         sectionTitle={cv.experienceSectionTitle}
       />
 
-      {/* Props {
-        projectSectionTitle,
-        cardProject: [
-          {
-            title,
-            techStack,
-            projectLink,
-            startDate,
-            endDate,
-            description: [
-              bulletPoint, ...,
-            ]
-          }
-        ]
-      } */}
-      <Projects />
+      <Projects 
+        projects={cv.projects}
+        sectionTitle={cv.projectSectionTitle}
+      />
 
-      {/* Props {
-        organizationSectionTitle,
-        cardOrganization: [
-          {
-            title,
-            location,
-            startDate,
-            endDate,
-            description: [
-              bulletPoint, ...,
-            ]
-          }
-        ]
-      } */}
-      <Organizations />
+      <Organizations 
+        organizations={cv.organizations}
+        sectionTitle={cv.organizationSectionTitle}
+      />
     </section>
   );
 };

@@ -197,6 +197,65 @@ const Main = () => {
     });
   };
 
+  /* PROJECTS CRUD FUNCTIONS */
+  const handleFormChange = (e, id, sectionId) => {
+    const { name, value } = e.target;
+
+    setCv((draft) => {
+      const index = draft[sectionId].findIndex(
+        (item) => item.id === id
+      );
+      if (index !== -1) draft[sectionId][index][name] = value;
+    });
+  };
+
+  const handleAddProject = () => {
+    setCv((draft) => {
+      draft.projects.push({
+        id: uuidv4(),
+        title: '',
+        techStack: '',
+        projectUrl: '',
+        startDate: '',
+        endDate: '',
+        description: [
+          {
+            id: uuidv4(),
+            desc: '',
+          }
+        ],
+      });
+    });
+  };
+
+  const handleDeleteFormCard = (id, sectionId) => {
+    setCv((draft) => {
+      const index = draft[sectionId].findIndex(
+        (item) => item.id === id
+      );
+      if (index !== -1) draft[sectionId].splice(index, 1);
+    });
+  };
+
+  /* Add Organization */
+  const handleAddOrganization = () => {
+    setCv((draft) => {
+      draft.organizations.push({
+        id: uuidv4(),
+        title: '',
+        location: '',
+        startDate: '',
+        endDate: '',
+        description: [
+          {
+            id: uuidv4(),
+            desc: '',
+          }
+        ],
+      });
+    });
+  };
+
   /* Description Bullet Points */
   const handleDescriptionChange = (e, id, sectionId, listId) => {
     const { value } = e.target;
@@ -264,6 +323,10 @@ const Main = () => {
         onDescriptionChange={handleDescriptionChange}
         onAddDescription={handleAddDescription}
         onDeleteDescription={handleDeleteDescription}
+        onFormChange={handleFormChange}
+        onAddProject={handleAddProject}
+        onDeleteFormCard={handleDeleteFormCard}
+        onAddOrganization={handleAddOrganization}
       />
 
       <div id="cv-form-container">

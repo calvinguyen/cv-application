@@ -12,17 +12,7 @@ const Experiences = ({experiences, sectionTitle}) => {
   return (
     <section className="experiences">
       <h1 className="section-title">{sectionTitle}</h1>
-
-      {/* Experience Card goes here */}
-      {/* <ExperienceCard 
-        cardInfo={props.cardExperience[0]}
-      />
-
-      <ExperienceCard 
-        cardInfo={props.cardExperience[1]}
-      /> */}
       {experienceCards}
-
     </section>
   );
 };

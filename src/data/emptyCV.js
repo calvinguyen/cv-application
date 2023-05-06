@@ -94,23 +94,35 @@ const emptyCV = {
   projectSectionTitle: 'PROJECTS',
   projects: [
     {
+      id: uuidv4(),
       title: '',
       techStack: '',
       projectUrl: '',
       startDate: '',
       endDate: '',
-      description: [],
+      description: [
+        {
+          id: uuidv4(),
+          desc: '',
+        }
+      ],
     },
   ],
 
   organizationSectionTitle: 'ORGANIZATIONS',
   organizations: [
     {
+      id: uuidv4(),
       title: '',
       location: '',
       startDate: '',
       endDate: '',
-      description: [],
+      description: [
+        {
+          id: uuidv4(),
+          desc: '',
+        }
+      ],
     },
   ],
 };

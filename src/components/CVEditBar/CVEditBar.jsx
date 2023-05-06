@@ -32,6 +32,10 @@ const CVEditBar = ({
   onDescriptionChange,
   onAddDescription,
   onDeleteDescription,
+  onFormChange,
+  onAddProject,
+  onDeleteFormCard,
+  onAddOrganization,
 }) => {
   return (
     <section id='cv-edit-bar'>
@@ -86,37 +90,28 @@ const CVEditBar = ({
         onDeleteDescription={onDeleteDescription}
       />
 
-      {/* Props {
-        projectSectionTitle,
-        projects: [
-          {
-            title,
-            techStack,
-            projectUrl,
-            startDate,
-            endDate,
-            description: [bulletPoint, ...]
-          },
-        ]
-      } */}
-      <Projects 
+      <Projects
+        projects={cv.projects}
+        sectionTitle={cv.projectSectionTitle} 
         onSectionTitleChange={onSectionTitleChange}
+        onDescriptionChange={onDescriptionChange}
+        onAddDescription={onAddDescription}
+        onDeleteDescription={onDeleteDescription}
+        onFormChange={onFormChange}
+        onAddProject={onAddProject}
+        onDeleteFormCard={onDeleteFormCard}
       />
-      
-      {/* Props {
-        organizationSectionTitle,
-        organizations: [
-          {
-            title,
-            location,
-            startDate,
-            endDate,
-            description: [bulletPoint, ...]
-          },
-        ]
-      } */}
+
       <Organizations 
+        organizations={cv.organizations}
+        sectionTitle={cv.organizationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
+        onDescriptionChange={onDescriptionChange}
+        onAddDescription={onAddDescription}
+        onDeleteDescription={onDeleteDescription}
+        onFormChange={onFormChange}
+        onAddOrganization={onAddOrganization}
+        onDeleteFormCard={onDeleteFormCard}
       />
 
       <Certifications 
