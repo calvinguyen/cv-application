@@ -6,7 +6,7 @@ import CVForm from './CVForm/CVForm';
 import CVEditBar from './CVEditBar/CVEditBar';
 import SideBar from './SideBar';
 import emptyCV from '../data/emptyCV';
-// import exampleCV from '../data/exampleCV';
+import exampleCV from '../data/exampleCV';
 
 const Main = () => {
   const [cv, setCv] = useImmer(emptyCV);
@@ -17,6 +17,7 @@ const Main = () => {
     content: () => componentRef.current,
   });
 
+  /* Handle Profile Changes */
   const handleGeneralInfoChange = (e) => {
     const { name, value } = e.target;
 
@@ -227,9 +228,18 @@ const Main = () => {
       />
 
       <div id="cv-form-container">
-        <button className="print-btn" type="button" onClick={handlePrint}>
-          PRINT PDF
-        </button>
+        <div className="preview-btn-container">
+          <button className="print-btn load-pdf-btn" type="button" onClick={() => setCv(exampleCV)}>
+            LOAD EXAMPLE
+          </button>
+          <button className="print-btn" type="button" onClick={handlePrint}>
+            PRINT PDF
+          </button>
+          <button className="print-btn clear-pdf-btn" type="button" onClick={() => setCv(emptyCV)}>
+            CLEAR PDF
+          </button>
+        </div>
+        
         <CVForm cv={cv} ref={componentRef} />
       </div>
     </main>

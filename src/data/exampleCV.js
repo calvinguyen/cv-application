@@ -113,6 +113,7 @@ const emptyCV = {
   experienceSectionTitle: 'Work Experience',
   experiences: [
     {
+      id: uuidv4(),
       company: 'Google',
       jobTitle: 'Senior Software Engineer',
       location: 'Boston, MA',
@@ -121,15 +122,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
       ],
     },
@@ -138,6 +139,7 @@ const emptyCV = {
   projectSectionTitle: 'Projects',
   projects: [
     {
+      id: uuidv4(),
       title: 'The Social Network',
       techStack: 'MERN Stack',
       projectUrl: 'github.com',
@@ -146,15 +148,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
       ],
     },
@@ -163,6 +165,7 @@ const emptyCV = {
   organizationSectionTitle: 'Organizations',
   organizations: [
     {
+      id: uuidv4(),
       title: 'Honor Society',
       location: 'Boston, MA',
       startDate: 'March 2014',
@@ -170,15 +173,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
         {
           id: uuidv4(),
-          text: ``
+          desc: ``
         },
       ],
     },
