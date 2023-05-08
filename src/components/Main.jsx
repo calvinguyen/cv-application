@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 import { useImmer } from 'use-immer';
 import { v4 as uuidv4 } from 'uuid';
 import CVForm from './CVForm/CVForm';
@@ -8,6 +10,12 @@ import emptyCV from '../data/emptyCV';
 
 const Main = () => {
   const [cv, setCv] = useImmer(emptyCV);
+
+  /* PDF Print Logic */
+  const componentRef = useRef(null);
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   const handleGeneralInfoChange = (e) => {
     const { name, value } = e.target;
@@ -219,7 +227,8 @@ const Main = () => {
       />
 
       <div id="cv-form-container">
-        <CVForm cv={cv} />
+        <button type='button' onClick={handlePrint}>Print PDF</button>
+        <CVForm cv={cv} ref={componentRef} />
       </div>
     </main>
   );
