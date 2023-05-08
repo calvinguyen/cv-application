@@ -1,16 +1,16 @@
-const SkillItem = ({ skill, onSkillChange, onDeleteSkill }) => {
+const SkillItem = ({ skill, onFormChange, onDeleteFormCard }) => {
   return (
     <div className="skill-input-container">
       <input
         type="text"
         name="name"
         value={skill.name}
-        onChange={(e) => onSkillChange(e, skill.id)}
+        onChange={(e) => onFormChange(e, skill.id, 'skills')}
       />
       <button
         className="x-btn input-x-btn"
         type="button"
-        onClick={() => onDeleteSkill(skill.id)}
+        onClick={() => onDeleteFormCard(skill.id, 'skills')}
       >
         X
       </button>
@@ -20,7 +20,7 @@ const SkillItem = ({ skill, onSkillChange, onDeleteSkill }) => {
         min="0"
         max="100"
         value={skill.level}
-        onChange={(e) => onSkillChange(e, skill.id)}
+        onChange={(e) => onFormChange(e, skill.id, 'skills')}
       />
     </div>
   );
@@ -31,15 +31,15 @@ const Skills = ({
   sectionTitle,
   onSectionTitleChange,
   onAddSkill,
-  onSkillChange,
-  onDeleteSkill,
+  onFormChange,
+  onDeleteFormCard,
 }) => {
   const renderSkills = skills.map((skill) => (
     <SkillItem
       key={skill.id}
       skill={skill}
-      onSkillChange={onSkillChange}
-      onDeleteSkill={onDeleteSkill}
+      onFormChange={onFormChange}
+      onDeleteFormCard={onDeleteFormCard}
     />
   ));
 

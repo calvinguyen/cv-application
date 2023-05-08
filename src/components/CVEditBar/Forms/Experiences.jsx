@@ -28,8 +28,8 @@ const Description = ({
 
 const ExpCard = ({
   work,
-  onExperienceChange,
-  onDeleteExperience,
+  onFormChange,
+  onDeleteFormCard,
   onDescriptionChange,
   onAddDescription,
   onDeleteDescription,
@@ -49,7 +49,7 @@ const ExpCard = ({
       <button
         className="x-btn"
         type="button"
-        onClick={() => onDeleteExperience(work.id)}
+        onClick={() => onDeleteFormCard(work.id, 'experiences')}
       >
         X
       </button>
@@ -59,7 +59,7 @@ const ExpCard = ({
           type="text"
           name="company"
           value={work.company}
-          onChange={(e) => onExperienceChange(e, work.id)}
+          onChange={(e) => onFormChange(e, work.id, 'experiences')}
         />
       </div>
       <div className="input-container">
@@ -68,7 +68,7 @@ const ExpCard = ({
           type="text"
           name="jobTitle"
           value={work.jobTitle}
-          onChange={(e) => onExperienceChange(e, work.id)}
+          onChange={(e) => onFormChange(e, work.id, 'experiences')}
         />
       </div>
       <div className="input-container">
@@ -77,7 +77,7 @@ const ExpCard = ({
           type="text"
           name="location"
           value={work.location}
-          onChange={(e) => onExperienceChange(e, work.id)}
+          onChange={(e) => onFormChange(e, work.id, 'experiences')}
         />
       </div>
       <div className="two-col">
@@ -87,7 +87,7 @@ const ExpCard = ({
             type="text"
             name="startDate"
             value={work.startDate}
-            onChange={(e) => onExperienceChange(e, work.id)}
+            onChange={(e) => onFormChange(e, work.id, 'experiences')}
           />
         </div>
         <div className="input-container">
@@ -96,7 +96,7 @@ const ExpCard = ({
             type="text"
             name="endDate"
             value={work.endDate}
-            onChange={(e) => onExperienceChange(e, work.id)}
+            onChange={(e) => onFormChange(e, work.id, 'experiences')}
           />
         </div>
       </div>
@@ -119,19 +119,19 @@ const Experiences = ({
   experiences,
   sectionTitle,
   onSectionTitleChange,
-  onExperienceChange,
   onAddExperience,
-  onDeleteExperience,
   onDescriptionChange,
   onAddDescription,
   onDeleteDescription,
+  onFormChange,
+  onDeleteFormCard,
 }) => {
   const renderExp = experiences.map((work) => (
     <ExpCard
       key={work.id}
       work={work}
-      onExperienceChange={onExperienceChange}
-      onDeleteExperience={onDeleteExperience}
+      onFormChange={onFormChange}
+      onDeleteFormCard={onDeleteFormCard}
       onDescriptionChange={onDescriptionChange}
       onAddDescription={onAddDescription}
       onDeleteDescription={onDeleteDescription}

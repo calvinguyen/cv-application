@@ -1,10 +1,10 @@
-const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
+const EducationCard = ({ school, onFormChange, onDeleteFormCard, }) => {
   return (
     <section className="form-card">
       <button
         className="x-btn"
         type="button"
-        onClick={() => onDeleteEducation(school.id)}
+        onClick={() => onDeleteFormCard(school.id, 'education')}
       >
         X
       </button>
@@ -15,7 +15,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
           type="text"
           name="schoolName"
           value={school.schoolName}
-          onChange={(e) => onEducationChange(e, school.id)}
+          onChange={(e) => onFormChange(e, school.id, 'education')}
         />
       </div>
       <div className="input-container">
@@ -24,7 +24,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
           type="text"
           name="location"
           value={school.location}
-          onChange={(e) => onEducationChange(e, school.id)}
+          onChange={(e) => onFormChange(e, school.id, 'education')}
         />
       </div>
       <div className="three-col">
@@ -34,7 +34,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
             type="text"
             name="startDate"
             value={school.startDate}
-            onChange={(e) => onEducationChange(e, school.id)}
+            onChange={(e) => onFormChange(e, school.id, 'education')}
           />
         </div>
         <div className="input-container">
@@ -43,7 +43,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
             type="text"
             name="endDate"
             value={school.endDate}
-            onChange={(e) => onEducationChange(e, school.id)}
+            onChange={(e) => onFormChange(e, school.id, 'education')}
           />
         </div>
         <div className="input-container">
@@ -52,7 +52,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
             type="text"
             name="gpa"
             value={school.gpa}
-            onChange={(e) => onEducationChange(e, school.id)}
+            onChange={(e) => onFormChange(e, school.id, 'education')}
           />
         </div>
       </div>
@@ -62,7 +62,7 @@ const EducationCard = ({ school, onEducationChange, onDeleteEducation }) => {
           type="text"
           name="degree"
           value={school.degree}
-          onChange={(e) => onEducationChange(e, school.id)}
+          onChange={(e) => onFormChange(e, school.id, 'education')}
         />
       </div>
     </section>
@@ -73,16 +73,16 @@ const Education = ({
   education,
   sectionTitle,
   onSectionTitleChange,
-  onEducationChange,
   onAddEducation,
-  onDeleteEducation,
+  onFormChange,
+  onDeleteFormCard,
 }) => {
   const renderSchools = education.map((school) => (
     <EducationCard
       key={school.id}
       school={school}
-      onEducationChange={onEducationChange}
-      onDeleteEducation={onDeleteEducation}
+      onFormChange={onFormChange}
+      onDeleteFormCard={onDeleteFormCard}
     />
   ));
 

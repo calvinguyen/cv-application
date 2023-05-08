@@ -1,14 +1,14 @@
 const CertCard = ({
   certification,
-  onCertificationChange,
-  onDeleteCertification,
+  onFormChange,
+  onDeleteFormCard,
 }) => {
   return (
     <section className="form-card">
       <button
         className="x-btn"
         type="button"
-        onClick={() => onDeleteCertification(certification.id)}
+        onClick={() => onDeleteFormCard(certification.id, 'certifications')}
       >
         X
       </button>
@@ -18,7 +18,7 @@ const CertCard = ({
           type="text"
           name="name"
           value={certification.name}
-          onChange={(e) => onCertificationChange(e, certification.id)}
+          onChange={(e) => onFormChange(e, certification.id, 'certifications')}
         />
       </div>
       <div className="input-container">
@@ -27,7 +27,7 @@ const CertCard = ({
           type="text"
           name="date"
           value={certification.date}
-          onChange={(e) => onCertificationChange(e, certification.id)}
+          onChange={(e) => onFormChange(e, certification.id, 'certifications')}
         />
       </div>
     </section>
@@ -38,16 +38,16 @@ const Certifications = ({
   certifications,
   sectionTitle,
   onSectionTitleChange,
-  onCertificationChange,
   onAddCertification,
-  onDeleteCertification,
+  onFormChange,
+  onDeleteFormCard,
 }) => {
   const renderCerts = certifications.map((cert) => (
     <CertCard
       key={cert.id}
       certification={cert}
-      onCertificationChange={onCertificationChange}
-      onDeleteCertification={onDeleteCertification}
+      onFormChange={onFormChange}
+      onDeleteFormCard={onDeleteFormCard}
     />
   ));
 

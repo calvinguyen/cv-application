@@ -15,20 +15,10 @@ const CVEditBar = ({
   onSocialProfileChange,
   onSectionTitleChange,
   onAddSkill,
-  onSkillChange,
-  onDeleteSkill,
-  onHobbyChange,
   onAddHobby,
-  onDeleteHobby,
-  onEducationChange,
   onAddEducation,
-  onDeleteEducation,
-  onCertificationChange,
   onAddCertification,
-  onDeleteCertification,
-  onExperienceChange,
   onAddExperience,
-  onDeleteExperience,
   onDescriptionChange,
   onAddDescription,
   onDeleteDescription,
@@ -56,38 +46,38 @@ const CVEditBar = ({
         sectionTitle={cv.skillSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
         onAddSkill={onAddSkill}
-        onSkillChange={onSkillChange}
-        onDeleteSkill={onDeleteSkill}
+        onFormChange={onFormChange}
+        onDeleteFormCard={onDeleteFormCard}
       />
 
       <Hobbies
         hobbies={cv.hobbies}
         sectionTitle={cv.hobbySectionTitle}
         onSectionTitleChange={onSectionTitleChange}
-        onHobbyChange={onHobbyChange}
         onAddHobby={onAddHobby}
-        onDeleteHobby={onDeleteHobby}
+        onFormChange={onFormChange}
+        onDeleteFormCard={onDeleteFormCard}
       />
 
       <Education
         education={cv.education}
         sectionTitle={cv.educationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
-        onEducationChange={onEducationChange}
         onAddEducation={onAddEducation}
-        onDeleteEducation={onDeleteEducation}
+        onFormChange={onFormChange}
+        onDeleteFormCard={onDeleteFormCard}
       />
 
       <Experiences
         experiences={cv.experiences}
         sectionTitle={cv.experienceSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
-        onExperienceChange={onExperienceChange}
         onAddExperience={onAddExperience}
-        onDeleteExperience={onDeleteExperience}
         onDescriptionChange={onDescriptionChange}
         onAddDescription={onAddDescription}
         onDeleteDescription={onDeleteDescription}
+        onFormChange={onFormChange}
+        onDeleteFormCard={onDeleteFormCard}
       />
 
       <Projects
@@ -118,9 +108,9 @@ const CVEditBar = ({
         certifications={cv.certifications}
         sectionTitle={cv.certificationSectionTitle}
         onSectionTitleChange={onSectionTitleChange}
-        onCertificationChange={onCertificationChange}
         onAddCertification={onAddCertification}
-        onDeleteCertification={onDeleteCertification}
+        onFormChange={onFormChange}
+        onDeleteFormCard={onDeleteFormCard}
       />
     </section>
   );

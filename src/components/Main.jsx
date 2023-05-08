@@ -6,11 +6,6 @@ import SideBar from './SideBar';
 import emptyCV from '../data/emptyCV';
 // import exampleCV from '../data/exampleCV';
 
-/* 
-  TODO: Hold Form State in Main
-  TODO: Pass State props to Form and Edit Form
-*/
-
 const Main = () => {
   const [cv, setCv] = useImmer(emptyCV);
 
@@ -39,15 +34,6 @@ const Main = () => {
   };
 
   /* SKILL CRUD FUNCTIONS */
-  const handleSkillChange = (e, skillId) => {
-    const { name, value } = e.target;
-
-    setCv((draft) => {
-      const index = draft.skills.findIndex((skill) => skill.id === skillId);
-      if (index !== -1) draft.skills[index][name] = value;
-    });
-  };
-
   const handleAddSKill = () => {
     setCv((draft) => {
       draft.skills.push({
@@ -58,23 +44,7 @@ const Main = () => {
     });
   };
 
-  const handleDeleteSkill = (skillId) => {
-    setCv((draft) => {
-      const index = draft.skills.findIndex((skill) => skill.id === skillId);
-      if (index !== -1) draft.skills.splice(index, 1);
-    });
-  };
-
   /* HOBBIES CRUD FUNCTIONS */
-  const handleHobbyChange = (e, hobbyId) => {
-    const { name, value } = e.target;
-
-    setCv((draft) => {
-      const index = draft.hobbies.findIndex((hobby) => hobby.id === hobbyId);
-      if (index !== -1) draft.hobbies[index][name] = value;
-    });
-  };
-
   const handleAddHobby = () => {
     setCv((draft) => {
       draft.hobbies.push({
@@ -84,25 +54,7 @@ const Main = () => {
     });
   };
 
-  const handleDeleteHobby = (hobbyId) => {
-    setCv((draft) => {
-      const index = draft.hobbies.findIndex((hobby) => hobby.id === hobbyId);
-      if (index !== -1) draft.hobbies.splice(index, 1);
-    });
-  };
-
   /* EDUCATION CRUD FUNCTIONS */
-  const handleEducationChange = (e, id) => {
-    const { name, value } = e.target;
-
-    setCv((draft) => {
-      const index = draft.education.findIndex(
-        (education) => education.id === id
-      );
-      if (index !== -1) draft.education[index][name] = value;
-    });
-  };
-
   const handleAddEducation = () => {
     setCv((draft) => {
       draft.education.push({
@@ -117,27 +69,7 @@ const Main = () => {
     });
   };
 
-  const handleDeleteEducation = (id) => {
-    setCv((draft) => {
-      const index = draft.education.findIndex(
-        (education) => education.id === id
-      );
-      if (index !== -1) draft.education.splice(index, 1);
-    });
-  };
-
   /* CERTIFICATIONS CRUD FUNCTIONS */
-  const handleCertificationChange = (e, id) => {
-    const { name, value } = e.target;
-
-    setCv((draft) => {
-      const index = draft.certifications.findIndex(
-        (certification) => certification.id === id
-      );
-      if (index !== -1) draft.certifications[index][name] = value;
-    });
-  };
-
   const handleAddCertification = () => {
     setCv((draft) => {
       draft.certifications.push({
@@ -148,27 +80,7 @@ const Main = () => {
     });
   };
 
-  const handleDeleteCertification = (id) => {
-    setCv((draft) => {
-      const index = draft.certifications.findIndex(
-        (certification) => certification.id === id
-      );
-      if (index !== -1) draft.certifications.splice(index, 1);
-    });
-  };
-
   /* EXPERIENCES CRUD FUNCTIONS */
-  const handleExperienceChange = (e, id) => {
-    const { name, value } = e.target;
-
-    setCv((draft) => {
-      const index = draft.experiences.findIndex(
-        (experience) => experience.id === id
-      );
-      if (index !== -1) draft.experiences[index][name] = value;
-    });
-  };
-
   const handleAddExperience = () => {
     setCv((draft) => {
       draft.experiences.push({
@@ -182,18 +94,9 @@ const Main = () => {
           {
             id: uuidv4(),
             desc: '',
-          }
+          },
         ],
       });
-    });
-  };
-
-  const handleDeleteExperience = (id) => {
-    setCv((draft) => {
-      const index = draft.experiences.findIndex(
-        (experience) => experience.id === id
-      );
-      if (index !== -1) draft.experiences.splice(index, 1);
     });
   };
 
@@ -202,9 +105,7 @@ const Main = () => {
     const { name, value } = e.target;
 
     setCv((draft) => {
-      const index = draft[sectionId].findIndex(
-        (item) => item.id === id
-      );
+      const index = draft[sectionId].findIndex((item) => item.id === id);
       if (index !== -1) draft[sectionId][index][name] = value;
     });
   };
@@ -222,7 +123,7 @@ const Main = () => {
           {
             id: uuidv4(),
             desc: '',
-          }
+          },
         ],
       });
     });
@@ -230,9 +131,7 @@ const Main = () => {
 
   const handleDeleteFormCard = (id, sectionId) => {
     setCv((draft) => {
-      const index = draft[sectionId].findIndex(
-        (item) => item.id === id
-      );
+      const index = draft[sectionId].findIndex((item) => item.id === id);
       if (index !== -1) draft[sectionId].splice(index, 1);
     });
   };
@@ -250,7 +149,7 @@ const Main = () => {
           {
             id: uuidv4(),
             desc: '',
-          }
+          },
         ],
       });
     });
@@ -267,12 +166,12 @@ const Main = () => {
       const index = draft[sectionId][sectionListIndex].description.findIndex(
         (desc) => desc.id === id
       );
-      if (index !== -1) draft[sectionId][sectionListIndex].description[index].desc = value;
+      if (index !== -1)
+        draft[sectionId][sectionListIndex].description[index].desc = value;
     });
   };
 
   const handleAddDescription = (sectionId, listId) => {
-
     setCv((draft) => {
       const sectionListIndex = draft[sectionId].findIndex(
         (list) => list.id === listId
@@ -280,11 +179,10 @@ const Main = () => {
       draft[sectionId][sectionListIndex].description.push({
         id: uuidv4(),
         desc: '',
-      })
+      });
     });
   };
   const handleDeleteDescription = (descId, sectionId, listId) => {
-
     setCv((draft) => {
       const sectionListIndex = draft[sectionId].findIndex(
         (list) => list.id === listId
@@ -292,7 +190,8 @@ const Main = () => {
       const index = draft[sectionId][sectionListIndex].description.findIndex(
         (desc) => desc.id === descId
       );
-      if (index !== -1) draft[sectionId][sectionListIndex].description.splice(index, 1);
+      if (index !== -1)
+        draft[sectionId][sectionListIndex].description.splice(index, 1);
     });
   };
 
@@ -306,20 +205,10 @@ const Main = () => {
         onSocialProfileChange={handleSocialProfileChange}
         onSectionTitleChange={handleSectionTitleChange}
         onAddSkill={handleAddSKill}
-        onSkillChange={handleSkillChange}
-        onDeleteSkill={handleDeleteSkill}
-        onHobbyChange={handleHobbyChange}
         onAddHobby={handleAddHobby}
-        onDeleteHobby={handleDeleteHobby}
-        onEducationChange={handleEducationChange}
         onAddEducation={handleAddEducation}
-        onDeleteEducation={handleDeleteEducation}
-        onCertificationChange={handleCertificationChange}
         onAddCertification={handleAddCertification}
-        onDeleteCertification={handleDeleteCertification}
-        onExperienceChange={handleExperienceChange}
         onAddExperience={handleAddExperience}
-        onDeleteExperience={handleDeleteExperience}
         onDescriptionChange={handleDescriptionChange}
         onAddDescription={handleAddDescription}
         onDeleteDescription={handleDeleteDescription}
