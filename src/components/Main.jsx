@@ -227,7 +227,9 @@ const Main = () => {
       />
 
       <div id="cv-form-container">
-        <button type='button' onClick={handlePrint}>Print PDF</button>
+        <button className="print-btn" type="button" onClick={handlePrint}>
+          PRINT PDF
+        </button>
         <CVForm cv={cv} ref={componentRef} />
       </div>
     </main>

@@ -6,7 +6,7 @@ import CVProfile from './CVProfile';
 
 const CVForm = forwardRef(({ cv }, ref) => {
   return (
-    <section id="cv-form" ref={ref} >
+    <section id="cv-form" ref={ref}>
       <CVHeader generalInfo={cv.generalInfo} />
 
       <CVMain cv={cv} />

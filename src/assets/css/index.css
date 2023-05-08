@@ -33,3 +33,20 @@ footer {
 #cv-form-container, #cv-edit-bar {
   overflow-y: auto;
 }
+
+.print-btn {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background-color: blue;
+}
