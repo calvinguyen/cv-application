@@ -113,3 +113,18 @@ form {
   margin-bottom: -20px;
   display: block;
 }
+
+.add-desc-btn {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-desc-btn:hover {
+  background-color: #16a34a;
+}
