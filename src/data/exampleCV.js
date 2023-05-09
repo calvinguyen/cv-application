@@ -18,8 +18,8 @@ const emptyCV = {
   socialProfiles: {
     linkedIn: 'linkedin.com/in/user',
     twitter: 'twitter.com/user',
-    facebook: 'facebook.com/user',
-    instagram: 'instagram.com/user',
+    facebook: '',
+    instagram: '',
     github: 'github.com/user',
   },
 
@@ -122,15 +122,37 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      company: 'Stack Overflow',
+      jobTitle: 'Software Engineer',
+      location: 'Boston, MA',
+      startDate: 'September 2014',
+      endDate: 'December 2015',
+      description: [
+        {
+          id: uuidv4(),
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
+        },
+        {
+          id: uuidv4(),
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
+        },
+        {
+          id: uuidv4(),
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi.`,
         },
       ],
     },
@@ -148,15 +170,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus.`,
         },
       ],
     },
@@ -173,15 +195,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.`,
         },
         {
           id: uuidv4(),
-          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.`,
         },
       ],
     },
