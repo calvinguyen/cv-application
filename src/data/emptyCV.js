@@ -1,9 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-import noAvatar from '../assets/images/noAvatar.jpg';
 
 const emptyCV = {
   generalInfo: {
-    profilePic: noAvatar,
+    profilePic: '',
     firstName: '',
     lastName: '',
     phone: '',

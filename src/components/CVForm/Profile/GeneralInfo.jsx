@@ -1,7 +1,9 @@
+import noAvatar from '../../../assets/images/noAvatar.jpg';
+
 const GeneralInfo = ({ generalInfo }) => {
   return (
     <section className="general-info">
-      <img src={generalInfo.profilePic} alt="profile" className="profile-pic" />
+      <img src={generalInfo.profilePic ? generalInfo.profilePic : noAvatar} alt="" className="profile-pic" />
       <p className="current-location">{generalInfo.location}</p>
       <div className="general-links">
         <p className="phone">{generalInfo.phone}</p>
