@@ -77,19 +77,6 @@ const emptyCV = {
       ],
     },
   ],
-  /* experiences: {
-    sectionTitle: 'WORK EXPERIENCE',
-    experienceList: [
-      {
-        company: '',
-        jobTitle: '',
-        location: '',
-        startDate: '',
-        endDate: '',
-        description: [],
-      },
-    ]
-  }, */
 
   projectSectionTitle: 'PROJECTS',
   projects: [

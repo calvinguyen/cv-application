@@ -6,48 +6,48 @@ const emptyCV = {
     profilePic: noAvatar,
     firstName: 'John',
     lastName: 'Smith',
-    phone: '281-965-9232',
-    email: 'cnguyenr42@gmail.com',
+    phone: '123-456-7890',
+    email: 'johnsmith@gmail.com',
     location: 'Houston, TX',
-    personalWebsite: 'http://calvinguyen.com',
+    personalWebsite: 'http://johnsmith.com',
     cvSummary: `Experienced lead full-stack software engineer seeking a position at a
     mid-sized web product startup where I can apply my skills in developing,
     scaling, and maintaining web services in Google Cloud.`,
   },
 
   socialProfiles: {
-    linkedIn: 'linkedin.com/in/calvintnguyen',
-    twitter: 'twitter.com/calvinguyen',
+    linkedIn: 'linkedin.com/in/user',
+    twitter: 'twitter.com/user',
     facebook: 'facebook.com/user',
     instagram: 'instagram.com/user',
-    github: 'github.com/calvinguyen',
+    github: 'github.com/user',
   },
 
   skillSectionTitle: 'Technologies',
   skills: [
     {
       id: uuidv4(),
-      skill: 'ReactJS',
+      name: 'ReactJS',
       level: 80,
     },
     {
       id: uuidv4(),
-      skill: 'Jest',
+      name: 'Jest',
       level: 100,
     },
     {
       id: uuidv4(),
-      skill: 'ExpressJS',
+      name: 'ExpressJS',
       level: 100,
     },
     {
       id: uuidv4(),
-      skill: 'Jupyter Notebook',
+      name: 'Jupyter Notebook',
       level: 100,
     },
     {
       id: uuidv4(),
-      skill: 'Django',
+      name: 'Django',
       level: 100,
     },
   ],
@@ -122,15 +122,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
       ],
     },
@@ -148,15 +148,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
       ],
     },
@@ -173,15 +173,15 @@ const emptyCV = {
       description: [
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
         {
           id: uuidv4(),
-          desc: ``
+          desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure architecto, aliquam nemo quae labore temporibus impedit ut necessitatibus minima sequi possimus voluptatum rerum nisi inventore itaque placeat unde optio. Dolore?`,
         },
       ],
     },
