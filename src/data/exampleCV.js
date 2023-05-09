@@ -23,7 +23,7 @@ const emptyCV = {
     github: 'github.com/user',
   },
 
-  skillSectionTitle: 'Technologies',
+  skillSectionTitle: 'TECHNOLOGIES',
   skills: [
     {
       id: uuidv4(),
@@ -52,7 +52,7 @@ const emptyCV = {
     },
   ],
 
-  hobbySectionTitle: 'Technical Skills',
+  hobbySectionTitle: 'TECHNICAL SKILLS',
   hobbies: [
     {
       id: uuidv4(),
@@ -88,7 +88,7 @@ const emptyCV = {
     },
   ],
 
-  educationSectionTitle: 'Education',
+  educationSectionTitle: 'EDUCATION',
   education: [
     {
       id: uuidv4(),
@@ -101,7 +101,7 @@ const emptyCV = {
     },
   ],
 
-  certificationSectionTitle: 'Certifications',
+  certificationSectionTitle: 'CERTIFICATIONS',
   certifications: [
     {
       id: uuidv4(),
@@ -110,7 +110,7 @@ const emptyCV = {
     },
   ],
 
-  experienceSectionTitle: 'Work Experience',
+  experienceSectionTitle: 'WORK EXPERIENCE',
   experiences: [
     {
       id: uuidv4(),
@@ -158,7 +158,7 @@ const emptyCV = {
     },
   ],
 
-  projectSectionTitle: 'Projects',
+  projectSectionTitle: 'PROJECTS',
   projects: [
     {
       id: uuidv4(),
@@ -184,7 +184,7 @@ const emptyCV = {
     },
   ],
 
-  organizationSectionTitle: 'Organizations',
+  organizationSectionTitle: 'ORGANIZATIONS',
   organizations: [
     {
       id: uuidv4(),

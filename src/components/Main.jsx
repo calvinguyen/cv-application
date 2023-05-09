@@ -9,7 +9,7 @@ import emptyCV from '../data/emptyCV';
 import exampleCV from '../data/exampleCV';
 
 const Main = () => {
-  const [cv, setCv] = useImmer(emptyCV);
+  const [cv, setCv] = useImmer(exampleCV);
 
   /* PDF Print Logic */
   const componentRef = useRef(null);
