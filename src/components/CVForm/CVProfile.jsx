@@ -13,19 +13,27 @@ const CVProfile = ({ cv }) => {
 
       <SocialLinks socialProfiles={cv.socialProfiles} />
 
-      <Skills skills={cv.skills} sectionTitle={cv.skillSectionTitle} />
+      {cv.skills.length ? (
+        <Skills skills={cv.skills} sectionTitle={cv.skillSectionTitle} />
+      ) : null}
 
-      <Hobbies hobbies={cv.hobbies} sectionTitle={cv.hobbySectionTitle} />
+      {cv.hobbies.length ? (
+        <Hobbies hobbies={cv.hobbies} sectionTitle={cv.hobbySectionTitle} />
+      ) : null}
 
-      <Education
-        education={cv.education}
-        sectionTitle={cv.educationSectionTitle}
-      />
+      {cv.education.length ? (
+        <Education
+          education={cv.education}
+          sectionTitle={cv.educationSectionTitle}
+        />
+      ) : null}
 
-      <Certifications
-        certifications={cv.certifications}
-        sectionTitle={cv.certificationSectionTitle}
-      />
+      {cv.certifications.length ? (
+        <Certifications
+          certifications={cv.certifications}
+          sectionTitle={cv.certificationSectionTitle}
+        />
+      ) : null}
     </section>
   );
 };

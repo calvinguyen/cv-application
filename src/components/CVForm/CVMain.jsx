@@ -3,24 +3,29 @@ import Projects from './Main/Projects';
 import Organizations from './Main/Organizations';
 import '../../assets/css/CVMain.css';
 
-const CVMain = ({cv}) => {
+const CVMain = ({ cv }) => {
   return (
     <section id="cv-main">
-      
-      <Experiences 
-        experiences={cv.experiences}
-        sectionTitle={cv.experienceSectionTitle}
-      />
+      {cv.experiences.length ? (
+        <Experiences
+          experiences={cv.experiences}
+          sectionTitle={cv.experienceSectionTitle}
+        />
+      ) : null}
 
-      <Projects 
-        projects={cv.projects}
-        sectionTitle={cv.projectSectionTitle}
-      />
+      {cv.projects.length ? (
+        <Projects
+          projects={cv.projects}
+          sectionTitle={cv.projectSectionTitle}
+        />
+      ) : null}
 
-      <Organizations 
-        organizations={cv.organizations}
-        sectionTitle={cv.organizationSectionTitle}
-      />
+      {cv.organizations.length ? (
+        <Organizations
+          organizations={cv.organizations}
+          sectionTitle={cv.organizationSectionTitle}
+        />
+      ) : null}
     </section>
   );
 };
