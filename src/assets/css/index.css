@@ -28,6 +28,19 @@ footer {
   color: white;
   display: flex;
   justify-content: center;
+  gap: 5px;
+}
+
+.footer-link {
+  color: white;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.61);
+}
+
+.footer-link:visited {
+  color: white;
 }
 
 #cv-form-container, #cv-edit-bar {

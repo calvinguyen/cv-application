@@ -1,10 +1,14 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 function Footer() {
   return (
     <footer>
       <p className="footer-text">Copyright &copy; calvinguyen</p>
-      {/* Github icon / link to profile */}
+      <a href="https://github.com/calvinguyen" target="_blank" rel="noopener noreferrer" className='footer-link'>
+        <GitHubIcon style={{ fontSize: 'large' }} />
+      </a>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
