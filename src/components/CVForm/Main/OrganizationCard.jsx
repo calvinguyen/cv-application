@@ -7,7 +7,7 @@ const OrganizationCard = ({ organization }) => {
     <div className="card">
       <p className="card-title">{organization.title}</p>
       <p className="card-subtitle">
-        {organization.location} &#8226; {organization.startDate} —{' '}
+        {organization.location} &#8226; {organization.startDate} -{' '}
         {organization.endDate}
       </p>
       <ul className="card-description">{bulletPoints}</ul>
