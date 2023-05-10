@@ -7,12 +7,16 @@ const ProjectCard = ({ project }) => {
     <div className="card">
       <p className="card-title">{project.title}</p>
       <p className="card-subtitle">
-        {project.techStack} &#8226;{' '}
-        <a href="#cv-main" className="project-link">
-          {project.projectUrl}
+        {project.techStack} {'\u2022'}{' '}
+        <a
+          href={`https://${project.projectUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          {project.projectUrl && 'Project Link'}
         </a>{' '}
-        &#8226;
-        {project.startDate} — {project.endDate}
+        {project.projectUrl && '\u2022'} {project.startDate} — {project.endDate}
       </p>
       <ul className="card-description">{bulletPoints}</ul>
     </div>
