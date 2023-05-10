@@ -10,7 +10,11 @@ const SocialLinks = ({ socialProfiles }) => {
       <ul className="social-links-list">
         {socialProfiles.linkedIn && (
           <li className="social-link-item">
-            <a href="#cv-profile">
+            <a
+              href={`https://${socialProfiles.linkedIn}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <LinkedInIcon />
               <span className="social-text">{socialProfiles.linkedIn}</span>
             </a>
@@ -18,7 +22,11 @@ const SocialLinks = ({ socialProfiles }) => {
         )}
         {socialProfiles.github && (
           <li className="social-link-item">
-            <a href="#cv-profile">
+            <a
+              href={`https://${socialProfiles.github}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon />
               <span className="social-text">{socialProfiles.github}</span>
             </a>
@@ -26,7 +34,11 @@ const SocialLinks = ({ socialProfiles }) => {
         )}
         {socialProfiles.twitter && (
           <li className="social-link-item">
-            <a href="#cv-profile">
+            <a
+              href={`https://${socialProfiles.twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <TwitterIcon />
               <span className="social-text">{socialProfiles.twitter}</span>
             </a>
@@ -34,7 +46,11 @@ const SocialLinks = ({ socialProfiles }) => {
         )}
         {socialProfiles.facebook && (
           <li className="social-link-item">
-            <a href="#cv-profile">
+            <a
+              href={`https://${socialProfiles.facebook}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FacebookIcon />
               <span className="social-text">{socialProfiles.facebook}</span>
             </a>
@@ -42,7 +58,11 @@ const SocialLinks = ({ socialProfiles }) => {
         )}
         {socialProfiles.instagram && (
           <li className="social-link-item">
-            <a href="#cv-profile">
+            <a
+              href={`https://${socialProfiles.instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <InstagramIcon />
               <span className="social-text">{socialProfiles.instagram}</span>
             </a>
