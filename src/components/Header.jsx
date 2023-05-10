@@ -3,7 +3,7 @@ function Header() {
     <header>
       <h1 className="header-text">CV CREATOR</h1>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -1,8 +1,4 @@
-const CertCard = ({
-  certification,
-  onFormChange,
-  onDeleteFormCard,
-}) => {
+const CertCard = ({ certification, onFormChange, onDeleteFormCard }) => {
   return (
     <section className="form-card">
       <button

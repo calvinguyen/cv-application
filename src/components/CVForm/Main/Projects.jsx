@@ -1,13 +1,9 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from './ProjectCard';
 
-const Projects = ({projects, sectionTitle}) => {
-  const cards = projects.map(card => {
-    return (
-      <ProjectCard 
-        key={card.id}
-        project={card} />
-    );
-  })
+const Projects = ({ projects, sectionTitle }) => {
+  const cards = projects.map((card) => {
+    return <ProjectCard key={card.id} project={card} />;
+  });
 
   return (
     <section className="projects">

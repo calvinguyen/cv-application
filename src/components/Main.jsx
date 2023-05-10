@@ -229,17 +229,25 @@ const Main = () => {
 
       <div id="cv-form-container">
         <div className="preview-btn-container">
-          <button className="print-btn load-pdf-btn" type="button" onClick={() => setCv(exampleCV)}>
+          <button
+            className="print-btn load-pdf-btn"
+            type="button"
+            onClick={() => setCv(exampleCV)}
+          >
             LOAD EXAMPLE
           </button>
           <button className="print-btn" type="button" onClick={handlePrint}>
             PRINT PDF
           </button>
-          <button className="print-btn clear-pdf-btn" type="button" onClick={() => setCv(emptyCV)}>
+          <button
+            className="print-btn clear-pdf-btn"
+            type="button"
+            onClick={() => setCv(emptyCV)}
+          >
             CLEAR PDF
           </button>
         </div>
-        
+
         <CVForm cv={cv} ref={componentRef} />
       </div>
     </main>

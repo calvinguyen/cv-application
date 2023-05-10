@@ -16,7 +16,8 @@ const ProjectCard = ({ project }) => {
         >
           {project.projectUrl && 'Project Link'}
         </a>{' '}
-        {project.projectUrl && '\u2022'} {`${project.startDate} - ${project.endDate}`}
+        {project.projectUrl && '\u2022'}{' '}
+        {`${project.startDate} - ${project.endDate}`}
       </p>
       <ul className="card-description">{bulletPoints}</ul>
     </div>

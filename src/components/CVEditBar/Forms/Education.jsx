@@ -1,4 +1,4 @@
-const EducationCard = ({ school, onFormChange, onDeleteFormCard, }) => {
+const EducationCard = ({ school, onFormChange, onDeleteFormCard }) => {
   return (
     <section className="form-card">
       <button
