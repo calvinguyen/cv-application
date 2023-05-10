@@ -19,6 +19,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/jsx-no-bind': 0,
     'react-refresh/only-export-components': 'warn',
+    'import/no-extraneous-dependencies': 0,
     'no-console': 'off',
     'no-unused-vars': 'warn',
     'arrow-body-style': 0,
